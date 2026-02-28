@@ -263,3 +263,16 @@ footer {
         align-items: center;
     }
 }
+
+@media (max-width: 768px) {
+
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-img {
+    margin-bottom: 20px;
+  }
+
+}
