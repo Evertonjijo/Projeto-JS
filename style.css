@@ -1,0 +1,265 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+    color: #2b2b2b;
+    background-color: #ffffff;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: rgba(13, 27, 42, 0.95);
+    color: white;
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c6a75e;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 200px 0 150px 0;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* SEÇÕES */
+.section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #c6a75e;
+    display: block;
+    margin: 15px auto 0;
+}
+
+/* BACKGROUNDS */
+.bg-light {
+    background: #f8f8f8;
+}
+
+.bg-dark {
+    background: #0d1b2a;
+    color: white;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #0d1b2a;
+}
+
+/* LISTA */
+.lista {
+    list-style: none;
+    margin-top: 40px;
+}
+
+.lista li {
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+}
+
+/* BOTÕES */
+.btn {
+    display: inline-block;
+    background: #c6a75e;
+    color: black;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 25px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #b8944f;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 2px solid #c6a75e;
+    color: #c6a75e;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 25px;
+    transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #c6a75e;
+    color: black;
+}
+
+/* FORMULÁRIO CONTATO */
+#contato form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contato input,
+#contato textarea {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+#contato textarea {
+    min-height: 140px;
+    resize: none;
+}
+
+#contato button {
+    border: none;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+/*imagem*/
+.sobre-img img {
+    width: 320px;
+    height: 400px;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 👈 muda aqui */
+    gap: 60px;
+    text-align: left;
+}
+
+
+
+
+/* RESPONSIVO */
+@media(max-width: 768px) {
+
+    header .container {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .hero {
+        padding: 150px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
