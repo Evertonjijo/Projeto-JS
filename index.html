@@ -48,20 +48,26 @@
 <section id="areas" class="section bg-light">
     <div class="container">
         <h2>Áreas de Atuação</h2>
+
         <div class="cards">
-            <div class="card">
+
+            <a href="/paginas/trabalhista.html" class="card">
                 <h3>Direito Trabalhista</h3>
                 <p>Defesa dos direitos de empregados e empregadores.</p>
-            </div>
-            <div class="card">
+            </a>
+
+            <a href="familia.html" class="card">
                 <h3>Direito de Família</h3>
                 <p>Divórcio, guarda, pensão alimentícia e inventários.</p>
-            </div>
-            <div class="card">
+            </a>
+
+            <a href="previdenciario.html" class="card">
                 <h3>Direito Previdenciário</h3>
                 <p>Aposentadorias, benefícios e revisões.</p>
-            </div>
+            </a>
+
         </div>
+
     </div>
 </section>
 
@@ -82,12 +88,31 @@
         <h2>Contato</h2>
         <p>Envie uma mensagem e retornaremos o mais breve possível.</p>
 
-        <form id="contactForm">
-            <input type="text" id="nome" placeholder="Seu nome" required>
-            <input type="email" id="email" placeholder="Seu email" required>
-            <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
-            <button type="submit" class="btn">Enviar Mensagem</button>
-        </form>
+        <form action="https://formsubmit.co/evertondesr@gmail.com" method="POST" class="form-contato">
+
+    <input type="text" name="nome" placeholder="Seu nome" required>
+
+    <input type="email" name="email" placeholder="Seu email" required>
+
+    <textarea name="mensagem" placeholder="Descreva seu caso brevemente" required></textarea>
+
+    <button type="submit" class="btn">Enviar Mensagem</button>
+
+    <!-- Proteção anti-spam -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Assunto do email -->
+    <input type="hidden" name="_subject" value="Novo contato pelo site">
+
+    <!-- Enviar cópia para quem preencheu -->
+    <input type="hidden" name="_autoresponse" 
+           value="Recebemos sua mensagem. Em breve retornaremos o contato.">
+
+    <!-- Redirecionamento -->
+    <input type="hidden" name="_next" 
+           value="https://SEUSITE.vercel.app/obrigado.html">
+
+</form>
     </div>
     
 </section>
